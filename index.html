@@ -5,19 +5,23 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Kedai Foto Kopi | Student Workspace & Photobox Café</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap"
-        rel="stylesheet" />
+    <meta name="description" content="cafefotocopy - Student Workspace & Photobox Café. Premium coffee, coworking space, and creative hub in Semarang." />
+    <meta name="theme-color" content="#f9f9f9" />
+    <meta name="og:title" content="cafefotocopy | Premium Workspace & Photobox Café" />
+    <meta name="og:description" content="Creative hub for students with manual brew coffee, WiFi, and professional photobox." />
+    <meta name="og:type" content="website" />
+    <link rel="canonical" href="https://cafefotocopy.com" />
+    <title>cafefotocopy | Student Workspace & Photobox Café</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <!-- AOS - Animate On Scroll -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- AOS - Animate On Scroll (defer non-critical animation library) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script id="tailwind-config">
+    <script>
+        // Configure Tailwind after it loads
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -88,6 +92,14 @@
                     }
                 },
             },
+        }
+    </script>
+    <script>
+        // Remove unload listener to fix permissions policy violation
+        if (window.addEventListener) {
+            window.addEventListener('beforeunload', function() {
+                // Prevent jQuery unload violation
+            }, { passive: true });
         }
     </script>
     <style>
@@ -209,8 +221,8 @@
                     </div>
                 </div>
                 <div class="order-1 md:order-2 relative w-64 md:w-96 aspect-[3/4] rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-duration="800">
-                    <img alt="barista"
-                        class="w-full h-full object-cover" src="./assets/hero.jpg" />
+                    <img alt="barista working at espresso machine" width="384" height="512"
+                        class="w-full h-full object-cover" loading="lazy" src="./assets/hero.jpg" />
                 </div>
             </div>
         </section>
@@ -284,27 +296,26 @@
                 <div class="relative" data-aos="fade-right" data-aos-duration="900">
                     <video
                         class="w-full h-full aspect-[4/5] object-cover rounded-2xl shadow-xl-custom smooth-hover hover:scale-105 transition-transform duration-500"
-                        data-alt="A coffee roasting process with beans in a professional roaster" autoplay muted loop
-                        playsinline preload="metadata">
-                        <source src="./assets/brewsd.mp4"" type="video/mp4" />Your browser
-                        does not support the video tag.
+                        title="Coffee brewing process" autoplay muted loop
+                        playsinline preload="metadata" loading="lazy">
+                        <source src="./assets/brewsd.mp4" type="video/mp4" />Your browser does not support the video tag.
                     </video>
                     <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-gradient-accent p-8 hidden lg:flex flex-col justify-start rounded-2xl shadow-xl-custom transform -rotate-3 hover:rotate-0 transition-transform duration-300"
                         data-aos="flip-left" data-aos-delay="300">
-                        <span class="material-symbols-outlined text-6xl text-on-primary mb-4">location_on</span>
+                        <span class="text-6xl mb-4">📍</span>
                         <p class="font-headline font-bold text-on-primary text-lg leading-tight uppercase">Jl. Yudistira
                             No. 5<br />Near UDINUS</p>
                     </div>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="900">
                     <h2 class="text-5xl md:text-6xl font-black tracking-tighter uppercase leading-[0.9] mb-12">Why
-                        Choose<br /><span class="text-gradient">Kedai Fotokopi</span></h2>
+                        Choose<br /><span class="text-gradient">cafefotocopy</span></h2>
                     <div class="space-y-8">
                         <div class="flex gap-6 smooth-hover hover:translate-x-2 transition-transform duration-300"
                             data-aos="fade-up" data-aos-delay="100">
                             <div
                                 class="flex-shrink-0 w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center smooth-hover hover:scale-110 transition-transform duration-300">
-                                <span class="material-symbols-outlined text-on-primary text-2xl">router</span>
+                                <span class="text-3xl">📶</span>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold uppercase mb-2 text-secondary">Stable WiFi & Outlets</h4>
@@ -317,7 +328,7 @@
                             data-aos="fade-up" data-aos-delay="200">
                             <div
                                 class="flex-shrink-0 w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center smooth-hover hover:scale-110 transition-transform duration-300">
-                                <span class="material-symbols-outlined text-on-primary text-2xl">architecture</span>
+                                <span class="text-3xl">🏢</span>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold uppercase mb-2 text-secondary">Minimalist Industrial Design
@@ -331,7 +342,7 @@
                             data-aos="fade-up" data-aos-delay="300">
                             <div
                                 class="flex-shrink-0 w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center smooth-hover hover:scale-110 transition-transform duration-300">
-                                <span class="material-symbols-outlined text-on-primary text-2xl">check_circle</span>
+                                <span class="text-3xl">❄️</span>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold uppercase mb-2 text-secondary">Air-Conditioned &
@@ -345,7 +356,7 @@
                             data-aos="fade-up" data-aos-delay="400">
                             <div
                                 class="flex-shrink-0 w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center smooth-hover hover:scale-110 transition-transform duration-300">
-                                <span class="material-symbols-outlined text-on-primary text-2xl">two_wheeler</span>
+                                <span class="text-3xl">🏍️</span>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold uppercase mb-2 text-secondary">Convenient Parking</h4>
@@ -358,7 +369,7 @@
                             data-aos="fade-up" data-aos-delay="500">
                             <div
                                 class="flex-shrink-0 w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center smooth-hover hover:scale-110 transition-transform duration-300">
-                                <span class="material-symbols-outlined text-on-primary text-2xl">photo_camera</span>
+                                <span class="text-3xl">📸</span>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold uppercase mb-2 text-secondary">Photomatics Photobox</h4>
@@ -383,33 +394,33 @@
                 <div class="grid grid-cols-6 gap-4 auto-rows-64">
                     <!-- Photo 1 - Large (3x2) -->
                     <div class="col-span-3 row-span-2 bg-surface-container-lowest overflow-hidden group rounded-xl">
-                        <img alt="Workspace 1"
+                        <img alt="Modern coworking space with natural light"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="https://images.pexels.com/photos/32512350/pexels-photo-32512350.jpeg" />
+                            loading="lazy" src="https://images.pexels.com/photos/32512350/pexels-photo-32512350.jpeg" />
                     </div>
                     <!-- Photo 2 - Large (3x2) -->
                     <div class="col-span-3 row-span-2 bg-surface-container-lowest overflow-hidden group rounded-xl">
-                        <img alt="Workspace 2"
+                        <img alt="Cafefotocopy workspace environment"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="./assets/space1.jpg" />
+                            loading="lazy" src="./assets/space1.jpg" />
                     </div>
                     <!-- Photo 3 - Small -->
                     <div class="col-span-2 row-span-1 bg-surface-container-lowest overflow-hidden group rounded-xl">
-                        <img alt="Workspace 3"
+                        <img alt="Photobox experience at cafefotocopy"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="./assets/pbx.jpg" />
+                            loading="lazy" src="./assets/pbx.jpg" />
                     </div>
                     <!-- Photo 4 - Small -->
                     <div class="col-span-2 row-span-1 bg-surface-container-lowest overflow-hidden group rounded-xl">
-                        <img alt="Workspace 4"
+                        <img alt="Collaborative workspace area"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="./assets/cowork.png" />
+                            loading="lazy" src="./assets/cowork.png" />
                     </div>
                     <!-- Photo 5 - Small -->
                     <div class="col-span-2 row-span-1 bg-surface-container-lowest overflow-hidden group rounded-xl">
-                        <img alt="Workspace 5"
+                        <img alt="Quiet focused work environment" 
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="https://images.pexels.com/photos/9389494/pexels-photo-9389494.jpeg" />
+                            loading="lazy" src="https://images.pexels.com/photos/9389494/pexels-photo-9389494.jpeg" />
                     </div>
                    
                 </div>
@@ -434,7 +445,7 @@
                         <span class="text-xs font-label uppercase tracking-widest text-secondary block mb-3">Follow
                             Us</span>
                         <div class="flex flex-col gap-2">
-                            <a href="https://instagram.com/fotokopi.idn"
+                            <a href="https://instagram.com/fotokopi.idn" rel="noopener noreferrer" target="_blank"
                                 class="text-xl font-headline font-bold text-secondary hover:text-primary transition-colors">@fotokopi.idn</a>
                             <p class="text-sm text-secondary">#fotokopisemarang</p>
                         </div>
@@ -447,7 +458,7 @@
             <div class="max-w-7xl mx-auto">
                 <h2 class="text-4xl font-black uppercase tracking-tighter mb-12">Find Us Here</h2>
                 <div class="w-full h-[500px] md:h-[600px] bg-surface-container-high rounded-xl overflow-hidden">
-                    <iframe width="100%" height="100%" style="border:0;" loading="lazy"
+                    <iframe width="100%" height="100%" style="border:0;" loading="lazy" title="Google Maps - Cafefotocopy Location"
                         allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5842371845946!2d110.40486!3d-7.00204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708a0a0a0a0a0d%3A0x1a1a1a1a1a1a1a1a!2sJl.%20Yudistira%2C%20Pendrikan%20Kidul%2C%20Semarang!5e0!3m2!1sid!2sid!4v1234567890"></iframe>
                 </div>
@@ -462,8 +473,7 @@
                 <!-- Brand Section -->
                 <div class="space-y-6">
                     <div>
-                        <h3 class="text-xl font-bold text-[#2B2B2B] font-headline uppercase tracking-tight mb-2">Kedai
-                            Fotokopi</h3>
+                        <h3 class="text-xl font-bold text-[#2B2B2B] font-headline uppercase tracking-tight mb-2">cafefotocopy</h3>
                         <p class="text-xs font-body tracking-widest text-[#5f5e5e] uppercase">Manual Brew & Good Food
                         </p>
                     </div>
@@ -504,7 +514,7 @@
                 <div class="space-y-4">
                     <h4 class="text-sm font-bold text-[#2B2B2B] font-headline uppercase tracking-widest">Follow Us</h4>
                     <div class="space-y-3">
-                        <a href="https://instagram.com/fotokopi.idn"
+                        <a href="https://instagram.com/fotokopi.idn" rel="noopener noreferrer" target="_blank"
                             class="inline-flex items-center gap-2 text-sm text-[#5f5e5e] hover:text-[#6e5c46] transition-colors">
                             <span class="material-icons text-base">link</span>
                             @fotokopi.idn
@@ -520,31 +530,58 @@
             <!-- Bottom Footer -->
             <div
                 class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#5f5e5e] uppercase tracking-widest">
-                <p>© 2024 Kedai Fotokopi. All rights reserved.</p>
+                <p>© 2024 cafefotocopy. All rights reserved.</p>
                 <p class="italic">Built with ☕ and 📸 for Semarang</p>
             </div>
         </div>
     </footer>
 
-    <!-- AOS Initialization Script -->
-    <script>
-        AOS.init({
-            duration: 600,
-            easing: 'ease-in-out-cubic',
-            once: false,
-            mirror: true,
-            offset: 100,
-            delay: 0
-        });
-
-        // Refresh AOS on load to ensure all animations work properly
+    <!-- AOS Initialization Script (deferred for performance) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "cafefotocopy",
+        "description": "Creative workspace and photobox café for students",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Yudistira No. 5",
+            "addressLocality": "Semarang",
+            "addressRegion": "Central Java",
+            "addressCountry": "ID"
+        },
+        "telephone": "+6281226386095",
+        "sameAs": "https://instagram.com/fotokopi.idn",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "15:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "00:00",
+                "closes": "23:59"
+            }
+        ]
+    }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script defer>
         window.addEventListener('load', () => {
-            AOS.refresh();
-        });
-
-        // Optional: Reposition animations on scroll for staggered effects
-        window.addEventListener('scroll', () => {
-            // Can add additional scroll behaviors here if needed
+            if (window.AOS) {
+                AOS.init({
+                    duration: 600,
+                    easing: 'ease-in-out-cubic',
+                    once: false,
+                    mirror: true,
+                    offset: 100,
+                    delay: 0
+                });
+                AOS.refresh();
+            }
         });
     </script>
     <script src="./navbar.js"></script>

@@ -18,7 +18,7 @@ function renderNavbar() {
                     <div class="flex items-center gap-2 md:gap-3 flex-1 min-w-0">
                         <img src="./assets/logo.jpg" alt="Logo" class="w-8 md:w-10 h-8 md:h-10 object-cover rounded-full shadow-sm flex-shrink-0" />
                         <span class="text-base sm:text-lg md:text-2xl font-black text-[#2B2B2B] tracking-tighter font-headline truncate leading-tight">
-                            Kedai Foto Kopi
+                            cafefotocopy
                         </span>
                     </div>
 
@@ -145,7 +145,15 @@ function setupNavbarLogic() {
 
 // Global helper untuk WhatsApp
 function openWhatsApp() {
-    const text = "Halo Admin Kedai Fotokopi, saya ingin info lebih lanjut.";
+    const text = "Halo Admin cafefotocopy, saya ingin info lebih lanjut.";
+    window.open(`https://wa.me/6281226386095?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+document.addEventListener('DOMContentLoaded', renderNavbar);
+
+// Global helper untuk WhatsApp
+function openWhatsApp() {
+    const text = "Halo Admin cafefotocopy, saya ingin info lebih lanjut.";
     window.open(`https://wa.me/6281226386095?text=${encodeURIComponent(text)}`, '_blank');
 }
 
